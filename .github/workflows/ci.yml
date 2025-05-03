@@ -26,13 +26,14 @@ jobs:
     - name: Run tests with coverage
       run: |
         pytest --cov=. --cov-report=xml
-    
 
-
-    - name: Upload coverage reports to Codecov
+    - name: Upload coverage report to Codecov
       uses: codecov/codecov-action@v5
       with:
+        file: ./coverage.xml
+        fail_ci_if_error: true
         token: ${{ secrets.CODECOV_TOKEN }}
+
 
     - name: Lint with flake8
       run: |
