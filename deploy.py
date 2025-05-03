@@ -47,7 +47,7 @@ if __name__ == "__main__":
         sys.exit(1)
     
     environment = sys.argv[1].upper()
-    if environment not in ["DESAROLLO", "STAGING", "PRODUCCION"]:
+    if environment not in ["DESARROLLO", "STAGING", "PRODUCCION"]:
         print("Entorno no válido. Use: DESARROLLO, STAGING o PRODUCCION")
         sys.exit(1)
     
